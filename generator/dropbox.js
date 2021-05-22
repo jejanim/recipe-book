@@ -4,7 +4,7 @@ const path = require("path");
 
 const fileExtension = ".md";
 const outDir = "downloaded";
-const blacklist = ['readme.md']
+const blacklist = ['readme.md', 'template.md']
 const token = fs.readFileSync('generator/token').toString();
 
 fs.rmdirSync(outDir, { recursive: true });
@@ -18,7 +18,7 @@ fs.mkdirSync(outDir, { recursive: true });
  *  dropbox_1.files.DeletedMetadataReference} entry
  */
 const downloadFile = (dbx, entry) => {
-  if(blacklist.includes(entry.name)){
+  if(blacklist.includes(entry.name.toLowerCase())){
     console.info(`File ${entry.name} is on the blacklist, not downloading.`)
     return
   }
