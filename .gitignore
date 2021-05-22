@@ -12,6 +12,11 @@
 /build
 /storybook-static
 
+# temporary
+/downloaded
+/generator/token
+/src/stories/*
+
 # misc
 .DS_Store
 .env.local
