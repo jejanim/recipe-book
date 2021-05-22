@@ -5,7 +5,8 @@ const path = require("path");
 const fileExtension = ".md";
 const outDir = "downloaded";
 const blacklist = ['readme.md', 'template.md']
-const token = fs.readFileSync('generator/token').toString();
+const token = process.env.DROPBOX_API_TOKEN || fs.readFileSync('generator/token').toString();
+
 
 fs.rmdirSync(outDir, { recursive: true });
 fs.mkdirSync(outDir, { recursive: true });
