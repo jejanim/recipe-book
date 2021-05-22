@@ -85,8 +85,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: packaged-storybook
-          path: |
-            storybook-static
+          path: storybook-static
   
   deploy:
     if: github.ref == 'refs/heads/main'
@@ -96,6 +95,8 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: packaged-storybook
+      - name: check
+        run: ls -l storybook-static
       - name: Deploy 🚀                
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
