@@ -76,10 +76,10 @@ jobs:
         with:
           path: node_modules
           key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-      - name: build
-        uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v2
         with:
           name: generated-stories
+      - name: build        
         run: npm run build-storybook
       - uses: actions/upload-artifact@v2
         with:
