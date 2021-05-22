@@ -94,9 +94,9 @@ jobs:
     steps:
       - name: Deploy 🚀   
         uses: actions/download-artifact@v2
-        with:
-          name: packaged-storybook     
+          with:
+            name: packaged-storybook     
         uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: storybook-static # The folder the action should deploy.
+          with:
+            branch: gh-pages # The branch the action should deploy to.
+            folder: storybook-static # The folder the action should deploy.
