@@ -1,6 +1,8 @@
 const fs = require("fs");
 const sourcePath = 'downloaded/recipes'
 const destPath = 'src/stories'
+const suffix = 'stories'
+const type = 'md'
 
 /**
  * Aasdfd
@@ -33,7 +35,7 @@ const getFilesInDirectoryRecursive = async (path) => {
  */
 const getCategories = (path) => {
   const blacklist = sourcePath.split('/')
-  return path.split('/').filter(c => !blacklist.includes(c) && !c.endsWith('.md'))
+  return path.split('/').filter(c => !blacklist.includes(c) && !c.endsWith(`.${type}`))
 }
 
 /**
@@ -41,14 +43,15 @@ const getCategories = (path) => {
  * @param {{path: string, name: string}} file
  */
 const createStory = (file) => {
-  const fileName = file.name
+  const fileName = file.name.substr(0, file.name.length -3)
   const categories = getCategories(file.path)
   const header = 
   `import { Meta } from '@storybook/addon-docs/blocks';
-  <Meta title="Rezepte/${categories.join('/')}/${fileName}" />\n\n`
+
+<Meta title="Rezepte/${categories.join('/')}/${fileName}" />\n\n`
   const content = fs.readFileSync(`${file.path}/${file.name}`)
 
-  fs.writeFileSync(`${destPath}/${fileName}x`, header + content)
+  fs.writeFileSync(`${destPath}/${fileName}.${suffix}.${type}x`, header + content)
 }
 
 getFilesInDirectoryRecursive(sourcePath)
@@ -57,6 +60,5 @@ getFilesInDirectoryRecursive(sourcePath)
     files.forEach(f => {
       console.log(`${f.path}/${f.name}`)
       createStory(f)
-      process.exit(0)
     })
   })
