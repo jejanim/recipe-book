@@ -54,6 +54,9 @@ const createStory = (file) => {
   fs.writeFileSync(`${destPath}/${fileName}.${suffix}.${type}x`, header + content)
 }
 
+fs.rmdirSync(destPath, { recursive: true });
+fs.mkdirSync(destPath, { recursive: true });
+
 getFilesInDirectoryRecursive(sourcePath)
   .then(files => {
     console.log(`RESULTS:`)
