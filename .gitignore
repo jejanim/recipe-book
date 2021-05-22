@@ -14,6 +14,7 @@
 
 # temporary
 /downloaded
+/generator/token
 
 # misc
 .DS_Store
