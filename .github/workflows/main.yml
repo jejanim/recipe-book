@@ -33,6 +33,7 @@ jobs:
           DROPBOX_API_TOKEN: ${{ secrets.DROPBOX_API_TOKEN }}
         run: |
           npm ci
+          npm run generate
           npm run build-storybook
       
       - name: Deploy 🚀
