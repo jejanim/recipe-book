@@ -15,6 +15,7 @@
 # temporary
 /downloaded
 /generator/token
+/src/stories/*
 
 # misc
 .DS_Store
