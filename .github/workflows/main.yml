@@ -60,10 +60,10 @@ jobs:
       - name: generate
         run: npm run generate
       - uses: actions/upload-artifact@v2
-          with:
-            name: generated-stories
-            path: |
-              src/stories
+        with:
+          name: generated-stories
+          path: |
+            src/stories
   
   build:
     if: github.ref == 'refs/heads/main'
