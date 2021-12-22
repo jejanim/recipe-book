@@ -8,8 +8,9 @@ const outDir = path.join(__dirname, '..', 'downloaded');
 const blacklist = ['readme.md', 'template.md']
 const token = process.env.DROPBOX_API_TOKEN || fs.readFileSync('generator/token').toString();
 
-
-fs.rmdirSync(outDir, { recursive: true });
+try {
+  fs.rmdirSync(outDir, { recursive: true });
+}catch(e){ /*do nothing */}
 fs.mkdirSync(outDir, { recursive: true });
 
 try{
