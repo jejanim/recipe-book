@@ -12,6 +12,16 @@ const token = process.env.DROPBOX_API_TOKEN || fs.readFileSync('generator/token'
 fs.rmdirSync(outDir, { recursive: true });
 fs.mkdirSync(outDir, { recursive: true });
 
+try{
+  console.log('testing download destination...')
+  fs.writeFileSync(path.join(outDir, 'test'), 'test')
+  console.log('success!')
+}catch(e){
+  console.err('failed!')
+  throw e
+}
+
+
 /**
  *
  * @param {dropbox_1.Dropbox} dbx
