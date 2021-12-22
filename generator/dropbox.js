@@ -2,8 +2,9 @@ const dropbox_1 = require("dropbox");
 const fs = require("fs");
 const path = require("path");
 
+const remoteDir = '/recipes';
 const fileExtension = ".md";
-const outDir = "downloaded";
+const outDir = path.join(__dirname, '..', 'downloaded');
 const blacklist = ['readme.md', 'template.md']
 const token = process.env.DROPBOX_API_TOKEN || fs.readFileSync('generator/token').toString();
 
@@ -93,6 +94,6 @@ const listFilesInFolder = (dbx, path) => {
 }
 
 const dbx = new dropbox_1.Dropbox({ accessToken: token });
-listFilesInFolder(dbx, "/recipes")
+listFilesInFolder(dbx, remoteDir)
   .then(entries => downloadFilesInFolder(dbx, entries))
 
