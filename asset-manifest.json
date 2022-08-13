@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "./static/css/main.bfa9ccdc.chunk.css",
-    "main.js": "./main.ffc3803508a3f6735744.bundle.js",
+    "main.js": "./main.5f28f55ca907a70bdedc.bundle.js",
     "main.css.map": "./static/css/main.bfa9ccdc.chunk.css.map",
-    "main.js.map": "./main.ffc3803508a3f6735744.bundle.js.map",
-    "runtime~main.js": "./runtime~main.ffc3803508a3f6735744.bundle.js",
-    "runtime~main.js.map": "./runtime~main.ffc3803508a3f6735744.bundle.js.map",
-    "vendors~main.js": "./vendors~main.ffc3803508a3f6735744.bundle.js",
-    "vendors~main.js.map": "./vendors~main.ffc3803508a3f6735744.bundle.js.map",
+    "main.js.map": "./main.5f28f55ca907a70bdedc.bundle.js.map",
+    "runtime~main.js": "./runtime~main.5f28f55ca907a70bdedc.bundle.js",
+    "runtime~main.js.map": "./runtime~main.5f28f55ca907a70bdedc.bundle.js.map",
+    "vendors~main.js": "./vendors~main.5f28f55ca907a70bdedc.bundle.js",
+    "vendors~main.js.map": "./vendors~main.5f28f55ca907a70bdedc.bundle.js.map",
     "iframe.html": "./iframe.html",
     "static/media/code-brackets.2e1112d7.svg": "./static/media/code-brackets.2e1112d7.svg",
     "static/media/colors.a4bd0486.svg": "./static/media/colors.a4bd0486.svg",
@@ -17,12 +17,12 @@
     "static/media/plugin.d494b228.svg": "./static/media/plugin.d494b228.svg",
     "static/media/repo.6d496322.svg": "./static/media/repo.6d496322.svg",
     "static/media/stackalt.dba9fbb3.svg": "./static/media/stackalt.dba9fbb3.svg",
-    "vendors~main.ffc3803508a3f6735744.bundle.js.LICENSE.txt": "./vendors~main.ffc3803508a3f6735744.bundle.js.LICENSE.txt"
+    "vendors~main.5f28f55ca907a70bdedc.bundle.js.LICENSE.txt": "./vendors~main.5f28f55ca907a70bdedc.bundle.js.LICENSE.txt"
   },
   "entrypoints": [
-    "runtime~main.ffc3803508a3f6735744.bundle.js",
-    "vendors~main.ffc3803508a3f6735744.bundle.js",
+    "runtime~main.5f28f55ca907a70bdedc.bundle.js",
+    "vendors~main.5f28f55ca907a70bdedc.bundle.js",
     "static/css/main.bfa9ccdc.chunk.css",
-    "main.ffc3803508a3f6735744.bundle.js"
+    "main.5f28f55ca907a70bdedc.bundle.js"
   ]
 }
